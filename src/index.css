@@ -1,21 +1,82 @@
-/* Mobile first design */
+/* Mobile first design (screen widths range: 360px - 414px)*/
 /* ---------------------------------- */
 
 :root {
   /* font family */
   /* font size */
   /* font weight */
+  --primary-text-color: black;
+}
+
+html {
+  justify-items: center;
 }
 
 * {
   /* clean slate */
   margin: 0;
   padding: 0;
-  max-width: 360px; /* mobile screen widths range from 360px to 414px */
-  align-content: center;
 }
 
 body {
+  width: 80%;
+  max-width: 700px;
+}
+
+h1 {
+  font-size: 30px;
+  color: var(--primary-text-color);
+  padding: 30px 0;
+  text-align: center;
+
+}
+
+form {
+  position: relative;
+  display: inline-block;
+  width: 80%;
+  margin: 0 10%;
+  
+  label {
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    position: absolute;
+    padding: 4px;
+    width: 50px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+
+    &:first-of-type {
+      right: 0;
+      margin-right: 55px;
+    }
+    &:last-of-type {
+      right: 0;
+    }
+  }
+  
+  .loginLink, .registerLink {
+    text-align: end;
+    margin-top: 75px;
+    
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+  }
+  
 }
 
 /* Large phones */

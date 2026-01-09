@@ -22,9 +22,10 @@ export default function Register() {
 
                 <button>OK</button>
                 <button>Cancel</button>
+
+                <p className='loginLink'>Login</p>
             </form>
             
-            <p>Login</p>
         </>
     )
 }

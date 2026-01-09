@@ -13,9 +13,10 @@ export default function Login() {
 
                 <button>OK</button>
                 <button>Cancel</button>
+
+                <p className='registerLink'>Register</p>
             </form>
             
-            <p>Register</p>
         </>
     )
 }

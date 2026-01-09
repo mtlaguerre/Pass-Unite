@@ -8,7 +8,7 @@ import SettingsPage from './components/SettingsPage';
 function App() {
 
 	let showLogin = true;
-	let showRegister = false;
+	let showRegister = !showLogin;
 	let showHome = false;
 	let showAddProfiles = false;
 	let showCredentials = false;
