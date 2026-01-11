@@ -1,4 +1,4 @@
-export default function Register() {
+export default function Register({ onLoginClick }) {
 
     return (
         <>
@@ -23,7 +23,7 @@ export default function Register() {
                 <button>OK</button>
                 <button>Cancel</button>
 
-                <p className='loginLink'>Login</p>
+                <p className='loginLink' onClick={onLoginClick}>Login</p>
             </form>
             
         </>

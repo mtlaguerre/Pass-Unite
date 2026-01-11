@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Login from './components/Login';
 import Register from './components/Register';
 import HomePage from './components/HomePage';
@@ -7,17 +8,21 @@ import SettingsPage from './components/SettingsPage';
 
 function App() {
 
-	let showLogin = true;
-	let showRegister = !showLogin;
+	const [showLogin, setShowLogin] = useState(true);
+
 	let showHome = false;
 	let showAddProfiles = false;
 	let showCredentials = false;
 	let showSettings = false;
+
+	function handleLoginOrRegisterClick() {
+		setShowLogin(!showLogin);
+	}
 	
 	return (
 		<>
-			{showLogin && <Login />}
-			{showRegister && <Register />}
+			{showLogin && <Login onRegisterClick={handleLoginOrRegisterClick} />}
+			{!showLogin && <Register onLoginClick={handleLoginOrRegisterClick} />}
 			{showHome && <HomePage />}
 			{showAddProfiles && <AddProfilesPage />}
 			{showCredentials && <CredentialsPage />}
