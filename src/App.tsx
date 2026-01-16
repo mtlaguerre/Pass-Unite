@@ -9,6 +9,7 @@ import SettingsPage from './components/SettingsPage';
 function App() {
 
 	const [showLogin, setShowLogin] = useState(true);
+	const [showRegister, setShowRegister] = useState(false);
 
 	let showHome = false;
 	let showAddProfiles = false;
@@ -17,12 +18,13 @@ function App() {
 
 	function handleLoginOrRegisterClick() {
 		setShowLogin(!showLogin);
+		setShowRegister(!showRegister);
 	}
 	
 	return (
 		<>
 			{showLogin && <Login onRegisterClick={handleLoginOrRegisterClick} />}
-			{!showLogin && <Register onLoginClick={handleLoginOrRegisterClick} />}
+			{showRegister && <Register onLoginClick={handleLoginOrRegisterClick} />}
 			{showHome && <HomePage />}
 			{showAddProfiles && <AddProfilesPage />}
 			{showCredentials && <CredentialsPage />}
