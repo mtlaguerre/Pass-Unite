@@ -1,4 +1,11 @@
-export default function Login({ onRegisterClick }) {
+export default function Login({ onLogin, onRegisterClick }) {
+
+    function handleVerifyLogin(event) {
+    event.preventDefault();
+
+    // once verified, call onLogin
+    onLogin();
+}
 
     return (
         <>
@@ -11,7 +18,7 @@ export default function Login({ onRegisterClick }) {
                 <label htmlFor='password'>Password:</label>
                 <input name='password' type='password'></input>
 
-                <button>OK</button>
+                <button type="submit" onClick={handleVerifyLogin}>OK</button>
                 <button>Cancel</button>
 
                 <p className='registerLink' onClick={onRegisterClick}>Register</p>

@@ -10,12 +10,17 @@ function App() {
 
 	const [showLogin, setShowLogin] = useState(true);
 	const [showRegister, setShowRegister] = useState(false);
+	const [showHomePage, setShowHomePage] = useState(false);
+	const [showAddProfilesPage, setShowAddProfilesPage] = useState(false);
+	const [showCredentialsPage, setShowCredentialsPage] = useState(false);
+	const [showSettingsPage, setShowSettingsPage] = useState(false);
 
-	let showHome = false;
-	let showAddProfiles = false;
-	let showCredentials = false;
-	let showSettings = false;
-
+	function handleLogin() {
+		setShowLogin(false);
+		setShowRegister(false);
+		setShowHomePage(true);
+	}
+	
 	function handleLoginOrRegisterClick() {
 		setShowLogin(!showLogin);
 		setShowRegister(!showRegister);
@@ -23,12 +28,12 @@ function App() {
 	
 	return (
 		<>
-			{showLogin && <Login onRegisterClick={handleLoginOrRegisterClick} />}
+			{showLogin && <Login onLogin={handleLogin} onRegisterClick={handleLoginOrRegisterClick} />}
 			{showRegister && <Register onLoginClick={handleLoginOrRegisterClick} />}
-			{showHome && <HomePage />}
-			{showAddProfiles && <AddProfilesPage />}
-			{showCredentials && <CredentialsPage />}
-			{showSettings && <SettingsPage />}
+			{showHomePage && <HomePage />}
+			{showAddProfilesPage && <AddProfilesPage />}
+			{showCredentialsPage && <CredentialsPage />}
+			{showSettingsPage && <SettingsPage />}
 		</>
 	)
 }
