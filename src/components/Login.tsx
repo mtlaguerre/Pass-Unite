@@ -9,7 +9,7 @@ export default function Login({ onLogin, onRegisterClick }) {
 
     return (
         <>
-            <h1>Login</h1>
+            <h1 className="title">Login</h1>
 
             <form id='loginForm'>
                 <label htmlFor='username'>Username:</label>

@@ -1,8 +1,8 @@
 export default function AddProfilesPage() {
 
     return (
-        <>
-            <h1>Add a Profile</h1>
+        <main>
+            <h1 className="title">Add a Profile</h1>
 
             <form id='AddProfileForm'>
                 <label htmlFor='website'>Website:</label>
@@ -15,8 +15,8 @@ export default function AddProfilesPage() {
                 <input name='password' type='password'></input> <span><i>{/* reveal/hide icon*/}</i></span>
 
                 <button>Generate</button>
-                <button>Add</button>
+                <button type="submit">Add</button>
             </form>
-        </>
+        </main>
     )
 }

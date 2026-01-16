@@ -2,7 +2,7 @@ export default function Register({ onLoginClick }) {
 
     return (
         <>
-            <h1>Register</h1>
+            <h1 className="title">Register</h1>
 
             <form id='registerForm'>
                 <label htmlFor='name'>Name</label>
